@@ -7,7 +7,7 @@ const streamPassThrough = new Stream.PassThrough();
 const params = {
 ACL: 'private',
 Body: streamPassThrough,
-Bucket: 'codepipeline-us-east-2-312282297207',
+Bucket: 'bucket name',
 ContentType: 'application/zip',
 Key: 'builk.zip',
 StorageClass: 'STANDARD_IA', // Or as appropriate
@@ -35,11 +35,7 @@ exports.handler = async (event) => {
         body: JSON.stringify('Hello from Lambda!'),
     };
     console.log(response);
-    const keys = [
-        "bulk-file/thanhren.jpg",
-        "bulk-file/tyren.jpg",
-        "bulk-file/function.zip",
-        "bulk-file/CODE-LAYOUT-BGP.rar"];
+    const keys = []; // add key here
     console.log(keys);
 
 
